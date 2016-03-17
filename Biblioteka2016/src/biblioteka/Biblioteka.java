@@ -6,8 +6,11 @@ import biblioteka.interfejs.BibliotekaInterfejs;
 
 public class Biblioteka implements BibliotekaInterfejs {
 	
+	//Ovo je lista svih knjiga u Biblioteci
+	
 	private LinkedList<Knjiga> knjige = new LinkedList<Knjiga>();
-
+	
+	// ne smeju se dodavati null knjige
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if(knjiga == null || knjige.contains(knjiga))
